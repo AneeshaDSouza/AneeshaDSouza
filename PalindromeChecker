@@ -1,0 +1,12 @@
+function palindrome(str) {
+  var chars = str.toLowerCase().replace(/[\W_]/g, "");
+  var firstHalf = chars.substr(0,chars.length/2);
+  var secondHalf = chars.substr(chars.length/2);
+  
+  if(chars.length % 2 === 0){
+  	return firstHalf === secondHalf.split("").reverse().join("");
+  } else {  	
+    return firstHalf === secondHalf.substr(1).split("").reverse().join("");  	
+  }
+}
+palindrome("madam");
